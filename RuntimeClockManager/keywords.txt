@@ -1,0 +1,3 @@
+RCM	 KEYWORD1 
+SetClock	 KEYWORD2
+RCM_RescueMode	 KEYWORD2

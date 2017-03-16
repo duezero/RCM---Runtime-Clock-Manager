@@ -44,4 +44,21 @@ Arduino library for 8 bit AVR MCUs
  
  
  
-Time-dependant functions like delay(), millis() or Serial() will not work properly when the clock is reduced.
+Time-dependant functions like delay(), millis() or Serial() will not work properly when the clock is reduced. This because that functions are set on compile-time, based on f_cpu value defined in boards file.
+
+It's not recommended push the clock below 500kHz, for two reasons: 
+1 power saving is risible
+2 you cannot reprogram the MCU due to low clock.
+
+If you want to experiment with low clocks, uncomment (see example) _RCM_RescueMode();_. This function give you 5 seconds of full clock. The procedure is the sequent:
+
+1 switch off your MCU
+2 turn on again the MCU
+3 upload new sketch before 5 secs expires
+
+If you set clock below 500kHz without _RCM_RescueMode()_ active there is still the possibility to program again your MCU. WARNING -- Tested only with Arduino as ISP --
+
+1 Upload on your Arduino the sketch _Arduino ISP low clock_
+2 Burn the bootloader
+3 Upload on your Arduino the original sketch _Arduino ISP_
+4 Upload new sketch on your MCU

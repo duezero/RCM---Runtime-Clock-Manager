@@ -47,6 +47,7 @@ Arduino library for 8 bit AVR MCUs
 Time-dependant functions like delay(), millis() or Serial() will not work properly when the clock is reduced. This because that functions are set on compile-time, based on f_cpu value defined in boards file.
 
 It's not recommended push the clock below 500kHz, for two reasons: 
+
 1 power saving is risible
 2 you cannot reprogram the MCU due to low clock.
 

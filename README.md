@@ -59,7 +59,7 @@ If you want to experiment with low clocks, uncomment (see example) _RCM_RescueMo
 
 If you set clock below 500kHz without _RCM_RescueMode()_ active there is still the possibility to program again your MCU. WARNING -- Tested only with Arduino as ISP --
 
-1 Upload on your Arduino the sketch _Arduino ISP low clock_
+1 Upload on your Arduino the sketch _Arduino ISP low speed_
 2 Burn the bootloader
 3 Upload on your Arduino the original sketch _Arduino ISP_
 4 Upload new sketch on your MCU

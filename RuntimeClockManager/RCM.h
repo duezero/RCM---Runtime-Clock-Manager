@@ -99,4 +99,6 @@ SOFTWARE.
 extern void RCM_RescueMode();
 extern void SetClock(byte clk);
 
+extern void RCM_delay(unsigned long millisec);
+
 #endif

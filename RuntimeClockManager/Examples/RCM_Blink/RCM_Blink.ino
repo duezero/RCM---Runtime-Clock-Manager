@@ -24,7 +24,8 @@
 */
 
 #include "RCM.h"
-/*
+/* 
+   v1.2 added delay and millis 15/03/2018
    v1.1 first release 12/03/2017
 
 

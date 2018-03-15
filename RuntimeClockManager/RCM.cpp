@@ -21,7 +21,7 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   SOFTWARE.
 
-
+   v1.2 added delay and millis 15/03/2018
    v1.1 first release 12/03/2017
 
 
@@ -118,5 +118,11 @@ void SetClock(byte clk) {
 }
 void RCM_delay(unsigned long millisec) {
   delay(millisec / prsclr);
+}
+
+unsigned long int RCM_millis() {
+  unsigned long int RCMmillis;
+  RCMmillis = millis() * prsclr;
+  return RCMmillis;
 }
 

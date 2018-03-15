@@ -21,7 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  
- *
+ * v1.2 added delay and millis 15/03/2018
  * v1.1 first release 12/03/2017 
  * 
  
@@ -100,5 +100,7 @@ extern void RCM_RescueMode();
 extern void SetClock(byte clk);
 
 extern void RCM_delay(unsigned long millisec);
+
+unsigned long int RCM_millis();
 
 #endif

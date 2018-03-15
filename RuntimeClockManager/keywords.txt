@@ -2,3 +2,4 @@ RCM	 KEYWORD1
 SetClock	 KEYWORD2
 RCM_RescueMode	 KEYWORD2
 RCM_delay 	KEYWORD2
+RCM_millis      KEYWORD2

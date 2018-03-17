@@ -56,10 +56,22 @@ Arduino library for 8 bit AVR MCUs
  *  clk_125kHz  ~1.40 mA                // not recommended
  *  clk_62kHz   ~1.52 mA  // 62.500     // not recommended
  *  clk_31kHz   ~1.64 mA  // 31.250     // not recommended
+
+ ATtiny85 8MHz(int. osc.) 3.3V on a breadboard:
+
+ *  clk_8MHz    ~4.50 mA
+ *  clk_4MHz    ~2.90 mA
+ *  clk_2MHz    ~1.80 mA
+ *  clk_1MHz    ~1.20 mA
+ *  clk_500kHz  ~0.90 mA
+ *  clk_250kHz  ~0.80 mA                // not recommended
+ *  clk_125kHz  ~0.73 mA                // not recommended
+ *  clk_62kHz   ~0.68 mA  // 62.500     // not recommended
+ *  clk_31kHz   ~0.65 mA  // 31.250     // not recommended
  
  
  
-Time-dependant functions like delay(), millis() or Serial() will not work properly when the clock is reduced. This because that functions are set on compile-time, based on f_cpu value defined in boards file.
+Time-dependant functions like delay(), millis() or Serial() will not work properly when the clock is reduced. This because that functions are set on compile-time, based on f_cpu value defined in boards file. RCM_delay() and RCM_millis() can be used instead of standard delay and millis.
 
 It's not recommended push the clock below 500kHz, for two reasons: 
 
